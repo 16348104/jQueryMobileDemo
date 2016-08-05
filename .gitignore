@@ -1,0 +1,11 @@
+../.idea
+.gradle
+gradle
+out
+*.iml
+gradlew
+gradlew.bat
+/.gitignore
+.gitignore
+"UI\347\273\204\344\273\266/"
+.idea/
