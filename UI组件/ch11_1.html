@@ -2,14 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width",initial-scale="1">
+    <meta name="viewport" content="width=device-width" ,initial-scale="1">
     <title>jQuery Mobile的第一个网页</title>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style type="text/css">
+        #content {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<input type="text" name="uname" id="uid"value=""/>
-<input type="range" name="" id="" value="25" min="0" max="100" data-highlight="true"/>
+<!--第一页-->
+<div data-role="page" data-title="第一页" id="first">
+    <div data-role="header">
+        <h1>第一页</h1>
+    </div>
+    <div data-role="content" id="content" >
+        <a href="#second">到第二页</a>
+    </div>
+    <div data-role="footer">
+        <h4>页脚</h4>
+    </div>
+</div>
+<!--第二页-->
+<div data-role="page" data-title="第二页" id="second">
+    <div data-role="header">
+        <h1>第二页</h1>
+    </div>
+    <div data-role="content" id="content" >
+        <a href="#first">到第一页</a>
+        <input type="text" name="uname" id="uid" value=""/>
+        <input type="range" name="" id="" value="25" min="0" max="100" data-highlight="true"/>
+    </div>
+    <div data-role="footer">
+        <h4>页脚</h4>
+    </div>
+</div>
 </body>
 </html>
