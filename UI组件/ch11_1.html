@@ -22,12 +22,18 @@
     <input type="text" name="uname" id="uid" value=""/>
     <input type="range" name="" id="" value="25" min="0" max="100" data-highlight="true"/>
     <div data-role="content" id="content">
-        <a href="#second">到第二页</a>
+        <input type="button" value="button"/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+        <a href="#second" data-role="button" data-icon="delete">删除</a>
+        <a href="#second" data-role="button" data-mini="true">到第二页</a>
     </div>
     <div data-role="footer">
         <h4>页脚</h4>
     </div>
 </div>
+
+
 <!--第二页-->
 <div data-role="page" data-title="第二页" id="second">
     <div data-role="header">
@@ -61,9 +67,8 @@
             <label><input type="checkbox" name="checkbox0" checked>同意 </label>
             <input type="checkbox" name="checkbox-1" id="checkbox-1">
             <label for="checkbox-1">我同意</label>
+            <a href="#first" data-role="button" data-icon="arrow-u">到第一页</a>
         </div>
-
-        <a href="#first">到第一页</a>
     </div>
     <div data-role="footer">
         <h4>页脚</h4>
