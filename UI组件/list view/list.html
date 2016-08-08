@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" ,initial-scale="1">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+<ol data-role="listview">
+    <li><a href="">数学</a></li>
+    <li><a href="">语文</a></li>
+    <li><a href="">英语</a></li>
+</ol>
+<br>
+<br>
+<!--加圆角不与屏幕同宽-->
+<ul data-role="listview" data-inset="true">
+    <li><a href="">数学</a></li>
+    <li><a href="">语文</a></li>
+    <li><a href="">英语</a></li>
+</ul>
+<br>
+<!--加图片列表-->
+<ul data-role="listview" data-inset="true">
+    <li>
+        <a href="">
+            <img src="../../img/tab1-1.png" alt="">
+            <h3>数学</h3>
+            <p>时间： 人数： </p>
+        </a>
+        <a href="" data-icon="gear"></a>
+    </li>
+</ul>
+<!--计数器泡泡-->
+<ul data-role="listview" data-inset="true">
+    <li>
+        <a href="">
+            <img src="../../img/tab1-2.png" alt="">
+            <h3>数学</h3>
+            <p>时间：星期一  人数：10 人</p>
+            <span class="ui-li-count">9</span>
+        </a>
+        <a href="" data-icon="gear"></a>
+    </li>
+</ul>
+</body>
+</html>
