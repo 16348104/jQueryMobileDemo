@@ -24,11 +24,21 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css"/>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-
+    <!--<script src="../js/jquery.mobile-1.3.2.js"></script>-->
 
     <script type="text/javascript">
-
-
+        $(document).one("pagecreate", "demo_page", function () {
+            $("#gosecond").on('click', function () {
+               $(document).$(":mobile-pagecontainer").pagecontainer("change", "#second", {
+                    transition: "slide"
+                });
+            });
+            $("#gofirst").on('click', function () {
+              $(document). $(":moblie-pagecontainer").pagetainer("change", "#first", {
+                    transition: "pop"
+                });
+            });
+        });
     </script>
 
     <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -49,13 +59,16 @@
 <!--第一页-->
 <div data-role="page" data-title="第一页" id="first" class="demo_page" data-theme="a">
     <div data-role="header">
-        <a href="#second" id="gosecond">到第2页</a>
+        <a href="#second" id="gosecond">按我到第2页</a>
         <h1>浪淘沙</h1>
     </div>
     <div data-role="content">
-         天上人间<br>
-        这是第1页
-
+        帘外雨潺潺，春意阑珊。<br>
+        罗衾不耐五更寒。梦里不知身是客，一晌贪欢。<br>
+        独自莫凭栏，无限江山，别时容易见时难。<br>
+        流水落花春去也，天上人间<br>
+        <br>
+        这是第1页<br>
     </div>
     <div data-role="footer">
         <h4>李熠《浪淘沙》</h4>
@@ -64,18 +77,23 @@
 
 
 <!--第二页-->
-<div data-role="page" data-title="第二页" id="second">
+<div data-role="page" data-title="第二页" id="second" class="demo_page" data-theme="a">
     <div data-role="header">
-        <a href="#first" data-transition="pop">到第1页</a>
-        <h1>jQueryMobile初始化事件 第2页</h1>
+        <a href="#first" data-transition="pop" >回上页</a>
+        <a href="#first"  id="gofirst">返回第1页</a>
+        <h1>锦 &nbsp;瑟</h1>婆婆
     </div>
     <div data-role="content">
-        初始化事件测试 <br>
+        锦瑟无端五十弦，一弦一柱思华年。<br>
+        庄生晓梦迷蝴蝶，望帝春心托杜鹃。<br>
+        沧海月明珠有泪，蓝田日暖玉生烟。<br>
+        此情可待成追忆，只是当时已惘然。<br>
+        <br>
         这是第2页
 
     </div>
     <div data-role="footer">
-        <h4>页脚</h4>
+        <h4>李商隐《锦瑟》</h4>
     </div>
 </div>
 </body>
