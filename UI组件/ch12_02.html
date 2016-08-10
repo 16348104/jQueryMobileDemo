@@ -19,21 +19,15 @@
       <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>-->
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+    <!--<link rel="stylesheet" href="../css/jquery.mobile-1.3.2.css">-->
+    <link rel="stylesheet" href="../themes/global.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css"/>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+
     <script type="text/javascript">
-        $(document).on("pagebeforcreate", function () {
-            alert("pagebeforecreate事件被触发！")
-        });
-        $(document).on("pagecreate", function () {
-            alert("pagecreate事件被触发")
-        });
-        $(document).on("pageinit", function () {
-            alert("pageinit事件被触发")
-        });
-        $(document).on("pageloadfailed", function () {
-            alert('页面加载失败');
-        });
+
 
     </script>
 
@@ -53,18 +47,18 @@
 </head>
 <body>
 <!--第一页-->
-<div data-role="page" data-title="第一页" id="first">
+<div data-role="page" data-title="第一页" id="first" class="demo_page" data-theme="a">
     <div data-role="header">
-        <a href="#second">到第2页</a>
-        <h1>jQueryMobile初始化事件 第一页</h1>
+        <a href="#second" id="gosecond">到第2页</a>
+        <h1>浪淘沙</h1>
     </div>
     <div data-role="content">
-        初始化事件测试 <br>
-        第一页
+         天上人间<br>
+        这是第1页
 
     </div>
     <div data-role="footer">
-        <h4>页脚</h4>
+        <h4>李熠《浪淘沙》</h4>
     </div>
 </div>
 
@@ -72,12 +66,12 @@
 <!--第二页-->
 <div data-role="page" data-title="第二页" id="second">
     <div data-role="header">
-        <a href="#first">到第1页</a>
+        <a href="#first" data-transition="pop">到第1页</a>
         <h1>jQueryMobile初始化事件 第2页</h1>
     </div>
     <div data-role="content">
         初始化事件测试 <br>
-        第2页
+        这是第2页
 
     </div>
     <div data-role="footer">
