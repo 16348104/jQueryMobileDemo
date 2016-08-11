@@ -2,46 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>初始化事件</title>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" ,initial-scale="1">
-    <title>jQuery Mobile滚动事件</title>
-    <!--  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"/>
-      <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-      <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>-->
+    <title>方向改变事件</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $("img").on("scrollstart", function () {
-                alert('触发了滚动事件!');
-            });
-            $('img').on('scrollstop',function(){
-                $('span').text('滚动事件结束!')
-            })
-        })
-    </script>
     <style>
-        span{color: #ff0000}
+        span {
+            color: #ff0000
+        }
     </style>
+    <script type="text/javascript">
+        $(document).on('pageinit', function (event) {
+            $(window).on('orientationchange', function (event) {
+                if (event.orientation == 'landscape') {
+                    $('#orientation').text('水平模式');
+                }
+                if (event.orientation == 'portrait') {
+                    $('#orientation').text('竖直模式');
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-<!--第一页-->
-<div data-role="page" data-title="第一页" id="first" class="demo_page" data-theme="a">
-    <div data-role="header">
 
+<div data-role="page" data-title="第一页">
+    <div data-role="header">
         <h1>浪淘沙</h1>
     </div>
     <div data-role="content">
-        <span> </span><br>
+        <span id="orientation"> </span><br>
         <img src="../img/info2.jpg">
         <div id="main_content">
             帘外雨潺潺，春意阑珊。<br></img>
@@ -49,7 +40,6 @@
             独自莫凭栏，无限江山，别时容易见时难。<br>
             流水落花春去也，天上人间<br>
             <br>
-            这是第1页<br>
         </div>
     </div>
     <div data-role="footer">
