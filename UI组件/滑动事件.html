@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>初始化事件</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" ,initial-scale="1">
+    <title>jQuery Mobile滑动事件</title>
+    <!--  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"/>
+      <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+       $(function(){
+           $("img").on("swipe", function () {
+               $('span').text('触发了滑动事件!');
+           });
+           $('#main_content').on('swipeleft',function(){
+               $('span').text('触发了向左滑动事件!')
+           })
+       })
+
+    </script>
+<style>
+    span{color: #ff0000}
+</style>
+</head>
+<body>
+<!--第一页-->
+<div data-role="page" data-title="第一页" id="first" class="demo_page" data-theme="a">
+    <div data-role="header">
+
+        <h1>浪淘沙</h1>
+    </div>
+    <div data-role="content">
+        <span> </span><br>
+        <img src="../img/info2.jpg">
+        <div id="main_content">
+            帘外雨潺潺，春意阑珊。<br></img>
+            罗衾不耐五更寒。梦里不知身是客，一晌贪欢。<br>
+            独自莫凭栏，无限江山，别时容易见时难。<br>
+            流水落花春去也，天上人间<br>
+            <br>
+            这是第1页<br>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h4>李熠《浪淘沙》</h4>
+    </div>
+</div>
+</body>
+</html>
